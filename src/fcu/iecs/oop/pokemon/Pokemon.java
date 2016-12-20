@@ -3,10 +3,12 @@ package fcu.iecs.oop.pokemon;
 public abstract class Pokemon {
 	
 	private final String name;
-    private final Pokemon type;
+    private final PokemonType type;
     private int cp;
     
-	public Pokemon(String name, Pokemon type, int cp) {
+    public abstract void attack();
+    
+	public Pokemon(String name, PokemonType type, int cp) {
 		this.name = name;
 		this.type = type;
 		this.cp = cp;
@@ -21,9 +23,8 @@ public abstract class Pokemon {
 	public String getName() {
 		return name;
 	}
-	public Pokemon getType() {
+	public PokemonType getType() {
 		return type;
 	}
 	
-	public abstract void attack();
 }
